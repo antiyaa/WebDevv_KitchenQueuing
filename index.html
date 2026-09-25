@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Tom Jones Kitchen</title>
+
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="app">
+
+    <header class="app-header">
+      <div>
+        <h1 class="brand">Tom Jones Kitchen</h1>
+        <p class="tagline">Order pad &amp; kitchen display</p>
+      </div>
+      <div class="live-badge">
+        <span class="live-dot"></span>
+        <span>Live queue</span>
+      </div>
+    </header>
+
+    <main class="panels">
+
+      <section class="card order-pad" aria-labelledby="order-pad-title">
+        <h2 id="order-pad-title" class="card-title">Order Pad</h2>
+
+        <div class="field">
+          <label for="table-select">Table</label>
+          <select id="table-select">
+            <option>Table 1</option>
+            <option>Table 2</option>
+            <option>Table 3</option>
+            <option>Table 4</option>
+            <option>Table 5</option>
+            <option>Table 6</option>
+            <option>Table 7</option>
+            <option>Table 8</option>
+          </select>
+        </div>
+
+        <div class="menu-block">
+          <div class="menu-label">Menu</div>
+          <ul id="menu-list" class="menu-list">
+          </ul>
+        </div>
+
+        <div class="order-total">
+          <div class="total-row">
+            <span>Total</span>
+            <span id="order-total-amount">₱0</span>
+          </div>
+          <button id="send-to-kitchen" class="btn-primary" disabled>Send to Kitchen</button>
+        </div>
+      </section>
+
+      <section class="card queue" aria-labelledby="queue-title">
+        <div class="queue-header">
+          <h2 id="queue-title" class="card-title">Kitchen Queue</h2>
+          <span id="pending-count" class="pending-count">0 pending</span>
+        </div>
+
+        <div class="sort-tabs" role="group" aria-label="Sort tickets">
+          <button class="tab active" data-sort="priority">Priority</button>
+          <button class="tab" data-sort="amount">Amount</button>
+          <button class="tab" data-sort="longest">Longest Waiting</button>
+        </div>
+
+        <div id="ticket-list" class="ticket-list">
+        </div>
+      </section>
+
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
