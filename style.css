@@ -408,3 +408,30 @@ select:focus-visible {
   outline: 2px solid var(--accent);
   outline-offset: 2px;
 }
+
+.drag-handle {
+  cursor: grab;
+  color: var(--muted);
+  user-select: none;
+}
+.drag-handle:active {
+  cursor: grabbing;
+}
+
+.ticket.warning {
+  border-left-color: #F59E0B;
+}
+.ticket.warning .warning-tag {
+  display: inline-block;
+  background: #FEF3C7;
+  color: #92400E;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  padding: 3px 10px;
+  border-radius: 999px;
+}
+
+.ticket.urgent {
+  border-left-color: var(--accent); /* Red */
+}
