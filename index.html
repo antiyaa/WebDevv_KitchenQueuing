@@ -68,9 +68,15 @@
           <button class="tab active" data-sort="priority">Priority</button>
           <button class="tab" data-sort="amount">Amount</button>
           <button class="tab" data-sort="longest">Longest Waiting</button>
+          <button class="tab" data-sort="table">Table</button>
         </div>
 
         <div id="ticket-list" class="ticket-list">
+        </div>
+        
+        <div class="completed-section" style="margin-top: 24px; border-top: 1px solid var(--border); padding-top: 16px;">
+          <h3 style="font-size: 16px; margin-bottom: 12px;">Completed Orders</h3>
+          <div id="completed-list" class="ticket-list"></div>
         </div>
       </section>
 
@@ -78,5 +84,7 @@
   </div>
 
   <script src="script.js"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js"></script>
 </body>
 </html>
